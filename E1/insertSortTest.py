@@ -92,4 +92,6 @@ for n in [100000, 1000000, 10000000, 100000000]:
     print(f'\tTotal:\t\t\t\t\t\t{totalUT}ut') # Total
 
     print(f'--- {w0 + w1 * totalUT + w2 * totalUT**2} seconds ---\n')
+
+print("Gracias a ello pudimos predecir todas las ultimas medidas")
 # ------------------------------------------------------------------------------------------
