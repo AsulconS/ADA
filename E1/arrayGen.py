@@ -27,4 +27,4 @@ def genArray(n, a = 0, b = 100):
                         # El aumento iterativo del for (i) (ref. linea 22)
         # -------------------------------------------------------------------------------------------
 
-    return (A, comp, asig, objc, malloc) # Retornado como 5-tupla
+    return A

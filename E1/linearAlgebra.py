@@ -1,11 +1,29 @@
-def scale(V, s):
+def addScalarVector(V, s):
+    return [v + s for v in V]
+
+def scaleVector(V, s):
     return [v * s for v in V]
 
-def powScale(V, p):
-    return [v**p for v in V]
+def powScaleVector(V, p):
+    return [v ** p for v in V]
 
-def vecProdScale(V1, V2):
+def vecSum(V1, V2):
+    return [v1 + v2 for (v1, v2) in zip(V1, V2)]
+
+def vecSub(V1, V2):
+    return [v1 - v2 for (v1, v2) in zip(V1, V2)]
+
+def vecProd(V1, V2):
     return [v1 * v2 for (v1, v2) in zip(V1, V2)]
+
+def vecTrueDiv(V1, V2):
+    return [v1 / v2 for (v1, v2) in zip(V1, V2)]
+
+def vecFloorDiv(V1, V2):
+    return [v1 // v2 for (v1, v2) in zip(V1, V2)]
+
+def dotProd(V1, V2):
+    return sum(vecProd(V1, V2))
 
 def rs(A, B):
     n = len(B)
@@ -33,3 +51,37 @@ def triangulate(A, B):
 def gauss(A, B):
     (GA, GB) = triangulate(A, B)
     return rs(GA, GB)
+
+# No mutable
+class MatVector:
+    def __init__(self, data):
+        self.data = data
+        self.length = len(data)
+
+    def __add__(self, o):
+        return MatVector(vecSum(self.data, o.data))
+
+    def __sub__(self, o):
+        return MatVector(vecSub(self.data, o.data))
+
+    def __mul__(self, o):
+        return MatVector(vecProd(self.data, o.data))
+
+    def __truediv__(self, o):
+        return MatVector(vecTrueDiv(self.data, o))
+
+    def __floordiv__(self, o):
+        return MatVector(vecFloorDiv(self.data, o))
+
+    def __pow__(self, o):
+        return MatVector(powScaleVector(self.data, o))
+
+    def addScalar(self, s):
+        return MatVector(addScalarVector(self.data, s))
+
+    def scale(self, s):
+        return MatVector(scaleVector(self.data, s))
+
+    @staticmethod
+    def multipleValues(val, size):
+        return MatVector([val] * size)
