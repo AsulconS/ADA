@@ -24,6 +24,9 @@ def main():
     ax3.plot(X, Y3, 'tab:green')
     ax3.set_title('Insert Sort mejor caso')
 
+    ax3.plot(X, Y1, 'tab:orange', X, Y2, 'tab:blue', X, Y3, 'tab:green')
+    ax3.set_title('Comparativa')
+
     ax1.set(xlabel = 'n', ylabel = 'ut')
     ax2.set(xlabel = 'n')
     ax3.set(xlabel = 'n')
