@@ -1,3 +1,5 @@
+### En el Ejercicio 1, Se puede ver un contraste en n = 2 aprox.
+### 
 ### La razon de la inversion de elementos
 ### es debido a que esto permite que en el
 ### algoritmo comun se suele tener que copiar
