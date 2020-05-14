@@ -24,8 +24,18 @@ def main():
     ax3.plot(X, Y3, 'tab:green')
     ax3.set_title('Insert Sort mejor caso')
 
-    ax3.plot(X, Y1, 'tab:orange', X, Y2, 'tab:blue', X, Y3, 'tab:green')
-    ax3.set_title('Comparativa')
+    XA = list(range(1, 8))
+    Y1 = list(range(1, 8))
+    Y2 = list(range(1, 8))
+    Y3 = list(range(1, 8))
+
+    for i in range(len(XA)):
+        Y1[i] = XA[i] * log2(XA[i])
+        Y2[i] = XA[i] ** 2
+        Y3[i] = XA[i]
+
+    ax4.plot(XA, Y1, 'tab:orange', XA, Y2, 'tab:blue', XA, Y3, 'tab:green')
+    ax4.set_title('Comparativa')
 
     ax1.set(xlabel = 'n', ylabel = 'ut')
     ax2.set(xlabel = 'n')
