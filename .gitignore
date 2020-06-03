@@ -1,2 +1,7 @@
 E1/__pycache__
 E1/test.py
+Exam/*
+Prob/*.obj
+Prob/*.exe
+Prob/vendor/*.obj
+Prob/vendor/*.exe
