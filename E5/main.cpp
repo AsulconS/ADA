@@ -42,7 +42,7 @@ void genArrays(int** arrays, int n, int size, int lBound, int rBound)
 {
     std::random_device rd;
     std::mt19937_64 mt(rd());
-    std::uniform_real_distribution<double> dist(lBound, rBound);
+    std::uniform_real_distribution<int> dist(lBound, rBound);
 
     for(int j = 0; j < size; ++j)
     {
