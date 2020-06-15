@@ -27,7 +27,7 @@ def main():
         qResults.append(times[1])
     inputFile.close()
 
-    Y = [(log(x)) for x in xFooLogN]
+    Y = [(1 + log(x)) for x in xFooLogN]
 
     #1
     plt.figure(0)
