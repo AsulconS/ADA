@@ -14,3 +14,8 @@ Prob/*.obj
 Prob/*.exe
 Prob/vendor/*.obj
 Prob/vendor/*.exe
+
+visualizing/*.obj
+visualizing/*.exe
+visualizing/*.lib
+visualizing/*.bat
