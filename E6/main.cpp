@@ -152,7 +152,7 @@ void quickPerformanceTest(int size, float& avg)
 int main()
 {
     int numTests {};
-    std::cout << "Insert the number of tests (Stepped by its double):\n";
+    std::cout << "Insert the n of tests (Stepped by its double):\n";
     std::cout << "\ti.e. 13 is for testing n from 2^8 to 2^20\n\t";
     std::cin  >> numTests;
     std::cout << std::endl;
