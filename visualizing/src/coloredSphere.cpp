@@ -54,13 +54,13 @@ void ColoredSphere::shuffle(gil::RenderingWindow& renderingWindow, const gil::Sh
         ri = dist(mt);
         swapWithIndices(i, ri);
 
-        glClearColor(0.125f, 0.125f, 0.125f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        //glClearColor(0.125f, 0.125f, 0.125f, 1.0f);
+        //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        draw(shader);
-        renderingWindow.swapBuffers();
+        //draw(shader);
+        //renderingWindow.swapBuffers();
 
-        Sleep(0.125f);
+        //Sleep(0.5f);
     }
 }
 
@@ -294,26 +294,26 @@ void ColoredSphere::merge(gil::RenderingWindow& renderingWindow, const gil::Shad
         {
             m_values.data()[k] = aux[i];
             setColorAtIndex(k, auxColors[i]);
-            glClearColor(0.125f, 0.125f, 0.125f, 1.0f);
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+            //glClearColor(0.125f, 0.125f, 0.125f, 1.0f);
+            //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-            draw(shader);
-            renderingWindow.swapBuffers();
+            //draw(shader);
+            //renderingWindow.swapBuffers();
 
-            Sleep(0.125f);
+            //Sleep(0.5f);
             ++i;
         }
         else
         {
             m_values.data()[k] = aux[j];
             setColorAtIndex(k, auxColors[j]);
-            glClearColor(0.125f, 0.125f, 0.125f, 1.0f);
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+            //glClearColor(0.125f, 0.125f, 0.125f, 1.0f);
+            //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-            draw(shader);
-            renderingWindow.swapBuffers();
+            //draw(shader);
+            //renderingWindow.swapBuffers();
 
-            Sleep(0.125f);
+            //Sleep(0.5f);
             --j;
         }
     }

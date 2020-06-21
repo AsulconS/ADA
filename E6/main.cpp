@@ -18,11 +18,11 @@ void swap(T& v1, T& v2)
     v2 = temp;
 }
 
-void genArrays(int** arrays, int n, int size, int lBound, int rBound)
+void genArrays(int** arrays, int n, int size)
 {
     std::random_device rd;
     std::mt19937_64 mt(rd());
-    std::uniform_int_distribution<int> dist(lBound, rBound);
+    std::uniform_int_distribution<int> dist(0, (1 << 30));
 
     for(int j = 0; j < size; ++j)
     {
@@ -115,7 +115,7 @@ void maxPerformanceTest(int size, float& avg)
     for(int i = 0; i < 200; ++i)
     {
         A = new int[size];
-        genArrays(&A, 1, size, 0, 1024 + 1);
+        genArrays(&A, 1, size);
         getMax(A, size, timesComp);
         avg += timesComp;
         delete[] A;
@@ -134,7 +134,7 @@ void quickPerformanceTest(int size, float& avg)
     for(int i = 0; i < 200; ++i)
     {
         A = new int[size];
-        genArrays(&A, 1, size, 0, 1024 + 1);
+        genArrays(&A, 1, size);
         quickSort(A, size, timesComp);
         avg += timesComp;
         delete[] A;
